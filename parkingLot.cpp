@@ -89,7 +89,7 @@ void parkingLot::payTax(int hours) {
 }
 
 //Occupy one parking space
-void parkingLot::parkCar(int lot[50][50]) {
+void parkingLot::parkCar() { //add lot for binary search
     if (availableSpace > 0) {
         --availableSpace;
     }

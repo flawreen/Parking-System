@@ -55,7 +55,7 @@ public:
 
     void payTax(int hours);
 
-    void parkCar(int lot[50][50]);
+    void parkCar();
 
     void showParkingLot();
 };

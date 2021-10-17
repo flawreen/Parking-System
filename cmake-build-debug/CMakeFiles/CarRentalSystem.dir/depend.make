@@ -6,6 +6,7 @@ CMakeFiles/CarRentalSystem.dir/Client.cpp.o: \
  ../Client.h \
  ../parkingLot.h
 CMakeFiles/CarRentalSystem.dir/main.cpp.o: \
+ ../Client.h \
  ../main.cpp \
  ../parkingLot.h
 CMakeFiles/CarRentalSystem.dir/parkingLot.cpp.o: \

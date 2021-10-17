@@ -7,15 +7,13 @@
 
 //CONSTRUCTORS
 
-Client::Client() {
-    Client::clientID = parkingLot::clientNumber;
-    ++parkingLot::clientNumber;
-}
-
 Client::Client(int clientID) {
     Client::clientID = clientID;
     ++parkingLot::clientNumber;
 }
+
+Client::Client() : Client(parkingLot::clientNumber) {}
+
 
 //GETTERS
 int Client::getClientId() const {
@@ -29,7 +27,8 @@ void Client::setClientId(int clientId) {
 
 //Pay the parking lot money for the parking space
 int parkingLot::clientNumber;
-void park(parkingLot &p, int hours) {
-    p.setParkingLotBalance(p.getTaxPerHour() * hours);
+void Client::park(parkingLot &p, int hours) {
+    p.payTax(hours);
+    p.parkCar();
 }
 

@@ -22,7 +22,7 @@ public:
     //SETTERS
     void setClientId(int clientId);
 
-    friend void park(parkingLot& p, int hours);
+    void park(parkingLot &p, int hours);
 };
 
 
