@@ -6,15 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/florin/CLionProjects/ParkingSystem/Client.cpp
-Client.h
 /home/florin/CLionProjects/ParkingSystem/Client.h
 parkingLot.h
 /home/florin/CLionProjects/ParkingSystem/parkingLot.h
-
-/home/florin/CLionProjects/ParkingSystem/Client.h
-parkingLot.h
-/home/florin/CLionProjects/ParkingSystem/parkingLot.h
+thread
+-
 
 /home/florin/CLionProjects/ParkingSystem/main.cpp
 iostream

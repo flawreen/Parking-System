@@ -7,6 +7,7 @@
 
 
 #include "parkingLot.h"
+#include <thread>
 
 class Client {
 private:
@@ -14,7 +15,6 @@ private:
 public:
     //CONSTRUCTORS
     Client();
-    Client(int clientID);
 
     //GETTERS
     int getClientId() const;
@@ -22,7 +22,7 @@ public:
     //SETTERS
     void setClientId(int clientId);
 
-    void park(parkingLot &p, int hours);
+    std::thread park(parkingLot &p, int hours);
 };
 
 

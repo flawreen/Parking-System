@@ -57,7 +57,10 @@ public:
 
     void parkCar();
 
+    void finishTime();
+
     void showParkingLot();
+
 };
 
 

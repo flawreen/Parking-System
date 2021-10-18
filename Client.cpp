@@ -2,18 +2,16 @@
 // Created by florin on 10/16/21.
 //
 
+#include <thread>
 #include "Client.h"
 #include "parkingLot.h"
 
 //CONSTRUCTORS
 
-Client::Client(int clientID) {
-    Client::clientID = clientID;
+Client::Client() {
     ++parkingLot::clientNumber;
+    Client::clientID = clientID;
 }
-
-Client::Client() : Client(parkingLot::clientNumber) {}
-
 
 //GETTERS
 int Client::getClientId() const {
@@ -27,8 +25,8 @@ void Client::setClientId(int clientId) {
 
 //Pay the parking lot money for the parking space
 int parkingLot::clientNumber;
-void Client::park(parkingLot &p, int hours) {
-    p.payTax(hours);
+std::thread Client::park(parkingLot &p, int hours) {
     p.parkCar();
+    p.payTax(hours);
 }
 

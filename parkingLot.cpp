@@ -3,6 +3,7 @@
 //
 
 #include "parkingLot.h"
+#include "unistd.h"
 #include <iostream>
 
 //CONSTRUCTORS
@@ -86,14 +87,21 @@ void parkingLot::setParkingLotBalance(double parkingLotBalance) {
 
 void parkingLot::payTax(int hours) {
     parkingLot::parkingLotBalance += hours * parkingLot::taxPerHour;
+    sleep(hours);
+    lot[availableSpace/10%10][availableSpace%10] = 0;
+    ++availableSpace;
 }
 
 //Occupy one parking space
 void parkingLot::parkCar() { //add lot for binary search
-    if (availableSpace > 0) {
+    if (availableSpace >= 0) {
         --availableSpace;
     }
+    lot[availableSpace/10%10][availableSpace%10] = availableSpace;
+
 }
+
+
 
 //Command line representation of the parking lot
 void parkingLot::showParkingLot() {
