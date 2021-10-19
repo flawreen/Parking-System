@@ -7,14 +7,14 @@
 
 
 #include <string>
+#include "Client.h"
 
 class parkingLot {
 private:
-    int rows, columns, totalSpace, availableSpace, lot[50][50];
-    double taxPerHour, parkingLotBalance;
+    int rows, columns, totalSpace, availableSpace, lot[11][11] = {0}, clientNumber;
+    double feeCostPerHour, parkingLotBalance;
     std::string lotName;
 public:
-    static int clientNumber;
     parkingLot();
     parkingLot(int columns);
     parkingLot(int rows, int columns);
@@ -31,7 +31,7 @@ public:
 
     int getClientNumber() const;
 
-    double getTaxPerHour() const;
+    double getFeeCostPerHour() const;
 
     double getParkingLotBalance() const;
 
@@ -48,16 +48,18 @@ public:
 
     void setClientNumber(int clientNumber);
 
-    void setTaxPerHour(double taxPerHour);
+    void setFeeCostPerHour(double taxPerHour);
 
     void setParkingLotBalance(double parkingLotBalance);
 
 
-    void payTax(int hours);
+    void payFee(int hours);
 
-    void parkCar();
+    int findParkingSpot();
 
-    void finishTime();
+    void parkCar(Client& c, int hours);
+
+    void leaveParkingLot(Client& c, int whichCar);
 
     void showParkingLot();
 

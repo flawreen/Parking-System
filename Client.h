@@ -6,23 +6,35 @@
 #define CARRENTALSYSTEM_CLIENT_H
 
 
-#include "parkingLot.h"
-#include <thread>
+class parkingLot;
 
 class Client {
 private:
-    int clientID;
+    int clientID, clientRow, clientColumn;
 public:
+    int parkedCars, parkingTickets[3] = {0};
     //CONSTRUCTORS
     Client();
 
     //GETTERS
     int getClientId() const;
 
+    int getClientRow() const;
+
+    int getClientColumn() const;
+
+    int getParkedCars() const;
+
     //SETTERS
     void setClientId(int clientId);
 
-    std::thread park(parkingLot &p, int hours);
+    void setClientRow(int row);
+
+    void setClientColumn(int column);
+
+    void setParkedCars(int parkedCars);
+
+
 };
 
 

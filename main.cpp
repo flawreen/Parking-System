@@ -1,14 +1,18 @@
 #include <iostream>
 #include "parkingLot.h"
-#include "Client.h"
 
 
 int main() {
-    parkingLot parcare1(7, 10, "La Gica");
+    parkingLot p1(7, 7, "La Gica");
     Client Florin;
-    parcare1.showParkingLot();
-    Florin.park(parcare1, 10);
-
+    p1.parkCar(Florin, 10);
+    std::cout << "dasdsa";
+    p1.parkCar(Florin, 9);
+    std::cout << Florin.parkingTickets[1];
+    p1.leaveParkingLot(Florin, 12);
+    p1.leaveParkingLot(Florin, 13);
+    p1.leaveParkingLot(Florin, 11);
+    p1.showParkingLot();
 
     return 0;
 }
