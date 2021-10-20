@@ -110,45 +110,49 @@ int parkingLot::findParkingSpot() {
 void parkingLot::parkCar(Client& c, int hours) {
     // Check if there are available spots and update them
     // One customer can not have more than three cars parked at the same time in the same parking lot
-    if (availableSpace >= 0 && c.parkedCars < 3) {
-        --availableSpace;
+    if (availableSpace >= 0) {
+        if (c.parkedCars < 3) {
+            --availableSpace;
 
-        // Check if the client is new and give him an ID
-        if (c.parkedCars == 0) { // adauga evidenta pentru clienti dupa nume (<string>) sau dupa id (<int>)
-            ++clientNumber;
-            c.setClientId(clientNumber);
-        }
-
-        // Find a free spot
-        int parkingSpot = findParkingSpot();
-
-        // Pay the parking fee
-        // Client gets a 50% discount every third park
-        if (c.getParkedCars() % 3 == 0 && c.getParkedCars() > 0) {
-            std::cout << "Client #" << c.getClientId() << " gets to park for half the price!\n";
-            parkingLotBalance += hours * feeCostPerHour / 2;
-        }
-        else {
-            payFee(hours);
-        }
-
-        // Give the client his ticket with the parking spot details
-        for (int i = 0; i < 3; ++i)
-            if (c.parkingTickets[i] == 0)
-            {
-                c.parkingTickets[i] = parkingSpot;
-                std::cout <<c.parkingTickets[i] << '\n';
+            // Check if the client is new and give him an ID
+            if (c.getClientId() == -1) { // adauga evidenta pentru clienti dupa nume (<string>) sau dupa id (<int>)
+                ++clientNumber;
+                c.setClientId(clientNumber);
             }
 
-        // Park the car
-        int i = parkingSpot / 10 % 10;
-        int j = parkingSpot % 10;
-        lot[i][j] = c.getClientId();
-        c.setClientRow(i);
-        c.setClientColumn(j);
-        ++c.parkedCars;
+            // Find a free spot
+            int parkingSpot = findParkingSpot();
+
+            // Pay the parking fee
+            // Client gets a 50% discount every third park
+            if (c.getParkedCars() % 3 == 0 && c.getParkedCars() > 0) {
+                std::cout << "Client #" << c.getClientId() << " gets to park for half the price!\n";
+                parkingLotBalance += hours * feeCostPerHour / 2;
+            } else {
+                payFee(hours);
+            }
+
+            // Give the client his ticket with the parking spot details
+            for (int i = 0; i < 3; ++i)
+                if (c.parkingTickets[i] == 0) {
+                    c.parkingTickets[i] = parkingSpot;
+                    break;
+                }
+
+            // Park the car
+            int i = parkingSpot / 10 % 10;
+            int j = parkingSpot % 10;
+            lot[i][j] = c.getClientId();
+            c.setClientRow(i);
+            c.setClientColumn(j);
+            ++c.parkedCars;
+        }
+        else {
+            std::cout << "You can not park more than three cars at once!\n";
+            return;
+        }
     } else {
-        std::cout << "Parking spot is full... Come back later!\n";
+        std::cout << "Parking lot is full... Come back later!\n";
         return;
     }
 }

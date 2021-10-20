@@ -8,6 +8,7 @@
 //CONSTRUCTORS
 Client::Client() {
     parkedCars = 0;
+    clientID = -1;
 }
 
 //GETTERS
@@ -27,6 +28,10 @@ int Client::getParkedCars() const {
     return parkedCars;
 }
 
+const std::string &Client::getClientName() const {
+    return clientName;
+}
+
 //SETTERS
 void Client::setClientId(int clientId) {
     clientID = clientId;
@@ -42,6 +47,10 @@ void Client::setClientColumn(int column) {
 
 void Client::setParkedCars(int parkedCars) {
     Client::parkedCars = parkedCars;
+}
+
+void Client::setClientName(const std::string &clientName) {
+    Client::clientName = clientName;
 }
 
 

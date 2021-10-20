@@ -7,6 +7,7 @@
 
 
 #include <string>
+#include <vector>
 #include "Client.h"
 
 class parkingLot {
@@ -14,6 +15,7 @@ private:
     int rows, columns, totalSpace, availableSpace, lot[11][11] = {0}, clientNumber;
     double feeCostPerHour, parkingLotBalance;
     std::string lotName;
+    std::vector<std::string> clientsList;
 public:
     parkingLot();
     parkingLot(int columns);
