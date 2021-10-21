@@ -10,12 +10,6 @@
 string
 -
 
-/home/florin/CLionProjects/ParkingSystem/main.cpp
-iostream
--
-parkingLot.h
-/home/florin/CLionProjects/ParkingSystem/parkingLot.h
-
 /home/florin/CLionProjects/ParkingSystem/parkingLot.cpp
 iostream
 -

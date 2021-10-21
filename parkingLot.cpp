@@ -6,10 +6,8 @@
 #include "Client.h"
 #include "parkingLot.h"
 
-std::string pathToFile = "/home/florin/CLionProjects/ParkingSystem/cmake-build-debug/accounts.txt";
-
-
-
+const std::string pathToFile = "/home/florin/CLionProjects/ParkingSystem/accounts.txt";
+const std::string pathToClientNumber = "/home/florin/CLionProjects/ParkingSystem/storeClientNumber.txt";
 
 //CONSTRUCTORS
 
@@ -28,8 +26,12 @@ parkingLot::parkingLot(int rows, int columns, const std::string& lotName) {
     parkingLot::totalSpace = parkingLot::rows * parkingLot::columns;
     parkingLot::availableSpace = totalSpace;
     parkingLot::feeCostPerHour = (double) parkingLot::rows * parkingLot::columns / 10;
-    parkingLot::clientNumber = 0;
     parkingLot::parkingLotBalance = 0;
+
+    std::ifstream fin(pathToClientNumber);
+    fin >> parkingLot::clientNumber;
+    fin.close();
+
 }
 
 parkingLot::parkingLot(int rows, int columns) : parkingLot(rows, columns, "Untitled") {}
@@ -115,11 +117,15 @@ void parkingLot::createNewUser(Client& c) {
     fout.open(pathToFile, std::fstream::out | std::fstream::app);
     std::cout << "You don't have an account! We will create one for you!\n";
 
-    ++parkingLot::clientNumber;
-    c.setClientId(parkingLot::clientNumber);
+    ++clientNumber;
+    c.setClientId(clientNumber);
     fout << c.getClientName() << std::endl;
     fout.close();
     std::cout << "*Now you have an account, " << c.getClientName() << "!\n";
+
+    fout.open(pathToClientNumber);
+    fout << clientNumber;
+    fout.close();
 }
 
 bool parkingLot::checkIfUsernameExists(Client& c, const std::string& username) {
