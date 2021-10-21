@@ -16,7 +16,7 @@ private:
 public:
     int parkedCars, parkingTickets[3] = {0};
     //CONSTRUCTORS
-    Client();
+    Client(std::string name);
 
     //GETTERS
     int getClientId() const;

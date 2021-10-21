@@ -15,12 +15,11 @@ private:
     int rows, columns, totalSpace, availableSpace, lot[11][11] = {0}, clientNumber;
     double feeCostPerHour, parkingLotBalance;
     std::string lotName;
-    std::vector<std::string> clientsList;
 public:
     parkingLot();
     parkingLot(int columns);
     parkingLot(int rows, int columns);
-    parkingLot(int rows, int columns, std::string lotName);
+    parkingLot(int rows, int columns, const std::string& lotName);
 
     //GETTERS
     int getRows() const;
@@ -37,7 +36,7 @@ public:
 
     double getParkingLotBalance() const;
 
-    const std::string getLotName() const;
+    std::string getLotName() const;
 
     //SETTERS
     void setRows(int rows);
@@ -59,9 +58,15 @@ public:
 
     int findParkingSpot();
 
+    bool checkIfUsernameExists(Client& c, const std::string& username);
+
+    void createNewUser(Client& c);
+
     void parkCar(Client& c, int hours);
 
-    void leaveParkingLot(Client& c, int whichCar);
+    void showClientCars(Client& c);
+
+    void leaveParkingLot(Client& c);
 
     void showParkingLot();
 

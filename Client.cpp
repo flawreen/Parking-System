@@ -6,9 +6,10 @@
 
 
 //CONSTRUCTORS
-Client::Client() {
+Client::Client(std::string name) {
     parkedCars = 0;
     clientID = -1;
+    clientName = name;
 }
 
 //GETTERS
