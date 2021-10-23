@@ -9,34 +9,8 @@
 /home/florin/CLionProjects/ParkingSystem/Client.cpp
 Client.h
 /home/florin/CLionProjects/ParkingSystem/Client.h
-utility
--
 
 /home/florin/CLionProjects/ParkingSystem/Client.h
 string
 -
-
-/home/florin/CLionProjects/ParkingSystem/main.cpp
-iostream
--
-parkingLot.h
-/home/florin/CLionProjects/ParkingSystem/parkingLot.h
-
-/home/florin/CLionProjects/ParkingSystem/parkingLot.cpp
-iostream
--
-fstream
--
-Client.h
-/home/florin/CLionProjects/ParkingSystem/Client.h
-parkingLot.h
-/home/florin/CLionProjects/ParkingSystem/parkingLot.h
-
-/home/florin/CLionProjects/ParkingSystem/parkingLot.h
-string
--
-vector
--
-Client.h
-/home/florin/CLionProjects/ParkingSystem/Client.h
 

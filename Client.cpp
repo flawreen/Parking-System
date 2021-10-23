@@ -4,8 +4,6 @@
 
 #include "Client.h"
 
-#include <utility>
-
 
 //CONSTRUCTORS
 Client::Client(const std::string& name) {
