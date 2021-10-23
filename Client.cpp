@@ -4,13 +4,17 @@
 
 #include "Client.h"
 
+#include <utility>
+
 
 //CONSTRUCTORS
-Client::Client(std::string name) {
+Client::Client(const std::string& name) {
     parkedCars = 0;
     clientID = -1;
     clientName = name;
 }
+
+Client::Client() : Client ("NoName") {}
 
 //GETTERS
 int Client::getClientId() const {
