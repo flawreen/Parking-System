@@ -45,19 +45,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/florin/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/212.5284.51/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/florin/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/212.5457.51/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/florin/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/212.5284.51/bin/cmake/linux/bin/cmake -E rm -f
+RM = /home/florin/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/212.5457.51/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/florin/CLionProjects/ParkingSystem
+CMAKE_SOURCE_DIR = /home/florin/Projects/CLionProjects/ParkingSystem
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/florin/CLionProjects/ParkingSystem/cmake-build-debug
+CMAKE_BINARY_DIR = /home/florin/Projects/CLionProjects/ParkingSystem/cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -81,14 +81,14 @@ clean: CMakeFiles/CarRentalSystem.dir/clean
 CMakeFiles/CarRentalSystem.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CarRentalSystem.dir/build.make CMakeFiles/CarRentalSystem.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CarRentalSystem.dir/build.make CMakeFiles/CarRentalSystem.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/florin/CLionProjects/ParkingSystem/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4 "Built target CarRentalSystem"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/florin/Projects/CLionProjects/ParkingSystem/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4 "Built target CarRentalSystem"
 .PHONY : CMakeFiles/CarRentalSystem.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/CarRentalSystem.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/florin/CLionProjects/ParkingSystem/cmake-build-debug/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/florin/Projects/CLionProjects/ParkingSystem/cmake-build-debug/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/CarRentalSystem.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/florin/CLionProjects/ParkingSystem/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/florin/Projects/CLionProjects/ParkingSystem/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/CarRentalSystem.dir/rule
 
 # Convenience name for target.

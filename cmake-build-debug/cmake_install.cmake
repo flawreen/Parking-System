@@ -1,4 +1,4 @@
-# Install script for directory: /home/florin/CLionProjects/ParkingSystem
+# Install script for directory: /home/florin/Projects/CLionProjects/ParkingSystem
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/florin/CLionProjects/ParkingSystem/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/florin/Projects/CLionProjects/ParkingSystem/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

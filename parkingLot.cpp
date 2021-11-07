@@ -6,8 +6,8 @@
 #include "Client.h"
 #include "parkingLot.h"
 
-const std::string pathToFile = "/home/florin/CLionProjects/ParkingSystem/accounts.txt";
-const std::string pathToClientNumber = "/home/florin/CLionProjects/ParkingSystem/storeClientNumber.txt";
+const std::string pathToFile = "accounts.txt";
+const std::string pathToClientNumber = "storeClientNumber.txt";
 
 //CONSTRUCTORS
 

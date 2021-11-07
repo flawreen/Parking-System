@@ -1,1 +1,1 @@
-/usr/bin/c++ -g CMakeFiles/CarRentalSystem.dir/main.cpp.o CMakeFiles/CarRentalSystem.dir/parkingLot.cpp.o CMakeFiles/CarRentalSystem.dir/Client.cpp.o -o CarRentalSystem 
+/usr/bin/g++ -g CMakeFiles/CarRentalSystem.dir/main.cpp.o CMakeFiles/CarRentalSystem.dir/parkingLot.cpp.o CMakeFiles/CarRentalSystem.dir/Client.cpp.o -o CarRentalSystem 
