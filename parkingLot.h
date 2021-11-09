@@ -16,9 +16,9 @@ private:
     double feeCostPerHour, parkingLotBalance;
     std::string lotName;
 public:
-    parkingLot();
-    parkingLot(int columns);
-    parkingLot(int rows, int columns);
+    parkingLot() = delete;
+    parkingLot(const std::string& lotName);
+    parkingLot(int columns, const std::string& lotName);
     parkingLot(int rows, int columns, const std::string& lotName);
 
     //GETTERS

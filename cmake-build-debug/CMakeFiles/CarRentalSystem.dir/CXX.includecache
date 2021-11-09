@@ -10,13 +10,13 @@
 string
 -
 
-/home/florin/Projects/CLionProjects/ParkingSystem/parkingLot.cpp
+/home/florin/Projects/CLionProjects/ParkingSystem/main.cpp
 iostream
 -
-fstream
+string
 -
-Client.h
-/home/florin/Projects/CLionProjects/ParkingSystem/Client.h
+iterator
+-
 parkingLot.h
 /home/florin/Projects/CLionProjects/ParkingSystem/parkingLot.h
 

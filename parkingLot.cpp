@@ -20,8 +20,7 @@ parkingLot::parkingLot(int rows, int columns, const std::string& lotName) {
     else if (columns < 1) parkingLot::columns = 1;
     else parkingLot::columns = columns;
 
-    if (lotName.size() < 3) parkingLot::lotName = "Untitled";
-    else parkingLot::lotName = lotName;
+    parkingLot::lotName = lotName;
 
     parkingLot::totalSpace = parkingLot::rows * parkingLot::columns;
     parkingLot::availableSpace = totalSpace;
@@ -34,11 +33,10 @@ parkingLot::parkingLot(int rows, int columns, const std::string& lotName) {
 
 }
 
-parkingLot::parkingLot(int rows, int columns) : parkingLot(rows, columns, "Untitled") {}
+parkingLot::parkingLot(int columns, const std::string& lotName) : parkingLot(1, columns, lotName) {}
 
-parkingLot::parkingLot(int columns) : parkingLot(1, columns, "Untitled") {}
+parkingLot::parkingLot(const std::string& lotName) : parkingLot(1, 1, lotName) {}
 
-parkingLot::parkingLot() : parkingLot(1, 7, "Untitled") {}
 
 //GETTERS
 int parkingLot::getRows() const {
