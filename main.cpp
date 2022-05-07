@@ -4,6 +4,7 @@
 #include "parkingLot.h"
 
 /*
+CLI --- Discontinued
 class choices {
 private:
     int rows, columns;
